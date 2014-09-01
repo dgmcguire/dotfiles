@@ -4,16 +4,13 @@ filetype off                  " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'gioele/vim-autoswap'
-Bundle 'danro/rename.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/vim-handlebars'
-Bundle 'tpope/vim-surround'
-Bundle 'gmarik/vundle'
-Bundle 'aklt/vim-substitute'
-Bundle 'JarrodCTaylor/vim-js2coffee'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'gioele/vim-autoswap'
+Plugin 'danro/rename.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'gmarik/vundle'
+Plugin 'aklt/vim-substitute'
 
 call vundle#end()
 filetype plugin indent on 
