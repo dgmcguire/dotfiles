@@ -11,6 +11,7 @@ Plugin 'danro/rename.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'gmarik/vundle'
 Plugin 'aklt/vim-substitute'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on 
@@ -29,8 +30,11 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 "nerdtree
 map <leader>d :NERDTree<cr>
 
-colorscheme calmar256-dark
+" colorscheme calmar256-dark
+colorscheme wombat256mod
+" colorscheme railscasts
+
 
 " shows when you break the 80 column rule
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/"
+match OverLength /\%121v.\+/"
