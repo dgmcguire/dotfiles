@@ -12,6 +12,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'gmarik/vundle'
 Plugin 'aklt/vim-substitute'
 Plugin 'tpope/vim-fugitive'
+Plugin 'godlygeek/tabular'
+Plugin 'vim-scripts/greplace.vim'
 
 call vundle#end()
 filetype plugin indent on 
@@ -38,3 +40,6 @@ colorscheme wombat256mod
 " shows when you break the 80 column rule
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%121v.\+/"
+
+" removes escape lag
+set timeoutlen=1000 ttimeoutlen=0
