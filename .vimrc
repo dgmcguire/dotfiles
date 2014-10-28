@@ -44,3 +44,8 @@ match OverLength /\%121v.\+/"
 
 " removes escape lag
 set timeoutlen=1000 ttimeoutlen=0
+
+" enable per-project .vimrc files
+set exrc
+" Only execute safe per-project vimrc commands
+set secure
