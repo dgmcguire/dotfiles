@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/toolz/code/UserClosetItem/app/models'
-let g:netrw_dirhist_2='/usr/bin'
-let g:netrw_dirhist_3='/home/toolz/code/UserClosetItem'
-let g:netrw_dirhist_4='/home/toolz/code/UserClosetItem/app'
-let g:netrw_dirhist_5='/home/toolz/code/UserClosetItem/app/models'
-let g:netrw_dirhist_6='/home/toolz/code/collegeAuction'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/tuelz/work/infinity-bulk-buyback/app/views/shared/headers'
+let g:netrw_dirhist_2='/Users/tuelz/work/infinity-bulk-buyback'
+let g:netrw_dirhist_3='/Users/tuelz/work/infinity-bulk-buyback/app'
+let g:netrw_dirhist_4='/Users/tuelz/work/infinity-bulk-buyback/app/views'
+let g:netrw_dirhist_5='/Users/tuelz/work/infinity-bulk-buyback/app'
+let g:netrw_dirhist_6='/Users/tuelz/work/infinity-bulk-buyback/app/lib'
+let g:netrw_dirhist_7='/Users/tuelz/work/infinity-bulk-buyback/app/lib/bindings'
