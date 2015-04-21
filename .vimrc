@@ -5,9 +5,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-Plugin 'gmarik/vundle' 
+Plugin 'gmarik/vundle'
 
 " Plugins
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'https://github.com/freeo/vim-kalisi'
 Plugin 'kien/ctrlp.vim'
@@ -31,7 +34,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'rking/ag.vim'
 
 call vundle#end()
-filetype plugin indent on 
+filetype plugin indent on
 
 set tabstop=2 shiftwidth=2 expandtab
 set relativenumber
@@ -46,7 +49,7 @@ let &t_AF="\e[38;5;%dm"
 
 let g:mapleader=","
 "ctrlp stuff
-" let g:ctrlp_by_filename=1 
+" let g:ctrlp_by_filename=1
 let g:ctrlp_root_markers = ['.git']
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
@@ -120,13 +123,13 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " endfunction
 
 " window management
-function! WinMove(key) 
+function! WinMove(key)
   let t:curwin = winnr()
   exec "wincmd ".a:key
   if (t:curwin == winnr()) "we havent moved
     if (match(a:key,'[jk]')) "were we going up/down
       wincmd v
-    else 
+    else
       wincmd s
     endif
     exec "wincmd ".a:key
@@ -147,7 +150,7 @@ function! s:ZoomToggle() abort
 endfunction
 command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <C-I> :ZoomToggle<CR>
- 
+
 map <leader>h              :call WinMove('h')<cr>
 map <leader>k              :call WinMove('k')<cr>
 map <leader>l              :call WinMove('l')<cr>
@@ -175,3 +178,27 @@ noremap  <buffer> <silent> $ g$
 " silver searcher options
 let g:ag_highlight=1
 let g:ag_mapping_message=0
+
+" airline config
+let g:airline#extensions#tabline#enabled = 1
+
+  " This allows buffers to be hidden if you've modified a buffer.
+  " This is almost a must if you wish to use buffers in this way.
+  set hidden
+
+  " To open a new empty buffer
+  " This replaces :tabnew which I used to bind to this mapping
+  nmap <leader>T :enew<cr>
+
+  " Move to the next buffer
+  nmap gt :bnext<CR>
+
+  " Move to the previous buffer
+  nmap gT :bprevious<CR>
+
+  " Close the current buffer and move to the previous one
+  " This replicates the idea of closing a tab
+  nmap ZZ :bp <BAR> bd #<CR>
+
+  " Show all open buffers and their status
+  nmap <leader>bl :ls<CR>
