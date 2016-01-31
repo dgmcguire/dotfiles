@@ -1,2 +1,13 @@
 .vim/bundle/*
 !.vim/bundle/README
+*~
+*.swp
+*.swo
+.env
+.ruby-version
+bin/
+.bundle/
+.DS_Store
+.sass-cache/
+.sass-cache*
+.css.map
