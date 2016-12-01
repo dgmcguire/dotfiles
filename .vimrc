@@ -6,13 +6,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
+Plugin 'stephpy/vim-yaml'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ryanmorillo/excel.vim'
 Plugin 'gmarik/vundle'
-
+Plugin 'lambdatoast/elm.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'https://github.com/freeo/vim-kalisi'
 Plugin 'kien/ctrlp.vim'
@@ -29,6 +32,11 @@ Plugin 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
+
+"airline stuff
+let g:airline_inactive_collapse=1
+let g:airline_section_b = '%f'
+let g:airline_section_c = '%t'
 
 set tabstop=2 shiftwidth=2 expandtab
 set relativenumber
@@ -147,29 +155,9 @@ noremap  <buffer> <silent> $ g$
 let g:ag_highlight=1
 let g:ag_mapping_message=0
 
-" airline config
-let g:airline#extensions#tabline#enabled = 1
-
   " This allows buffers to be hidden if you've modified a buffer.
   " This is almost a must if you wish to use buffers in this way.
   set hidden
-
-  " To open a new empty buffer
-  " This replaces :tabnew which I used to bind to this mapping
-  nmap <leader>T :enew<cr>
-
-  " Move to the next buffer
-  nmap gt :bnext<CR>
-
-  " Move to the previous buffer
-  nmap gT :bprevious<CR>
-
-  " Close the current buffer and move to the previous one
-  " This replicates the idea of closing a tab
-  nmap ZZ :bp <BAR> bd #<CR>
-
-  " Show all open buffers and their status
-  nmap <leader>bl :ls<CR>
 
 " copy file path into buffer
 :nmap cp :let @* = expand("%:p")
