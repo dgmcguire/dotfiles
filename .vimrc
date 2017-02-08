@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'stephpy/vim-yaml'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -56,7 +57,7 @@ let g:mapleader=","
 "ctrlp stuff
 " let g:ctrlp_by_filename=1
 let g:ctrlp_root_markers = ['.git']
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|vendor\|tmp'
 let g:ctrlp_show_hidden = 1
 
 "nerdtree
@@ -79,10 +80,6 @@ set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
 cnoremap <leader>w <C-F>
-
-" tmux copy/paste stuff?
-
-set clipboard=unnamed
 
 " shows when you break the 80 column rule
 highlight OverLength ctermbg=black ctermfg=white guibg=#592929
