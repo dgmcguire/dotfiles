@@ -31,6 +31,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'shime/vim-livedown'
 Plugin 'rking/ag.vim'
 
+set dir=~/.vim/tmp
+
 call vundle#end()
 filetype plugin indent on
 
