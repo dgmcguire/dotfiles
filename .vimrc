@@ -6,6 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'bluz71/vim-moonfly-colors'
+Plugin 'kudabux/vim-srcery-drk'
+Plugin 'Zabanaa/neuromancer.vim'
+Plugin 'gkjgh/cobalt'
+Plugin 'janko-m/vim-test'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'stephpy/vim-yaml'
 Plugin 'vim-airline/vim-airline'
@@ -32,6 +39,7 @@ Plugin 'shime/vim-livedown'
 Plugin 'rking/ag.vim'
 
 set dir=~/.vim/tmp
+set shortmess=a
 
 call vundle#end()
 filetype plugin indent on
@@ -65,16 +73,19 @@ let g:ctrlp_show_hidden = 1
 "nerdtree
 map <leader>d :NERDTree<cr>
 
-" colorscheme calmar256-dark
-colorscheme kalisi
-set background=light
+set background=dark
+colorscheme moonfly
+ "colorscheme cobalt
+ "colorscheme calmar256-dark
+ "colorscheme kalisi
 " colorscheme sonoma
 " colorscheme railscasts
-" colorscheme liquidcarbon
-" colorscheme blacklight
+ "colorscheme liquidcarbon
+ "colorscheme blacklight
+" colorscheme neuromancer
 " colorscheme wombat
 " colorscheme gruvbox
-
+"colorscheme srcery-drk
 " text search stuff
 set incsearch
 set hlsearch
@@ -160,3 +171,19 @@ let g:ag_mapping_message=0
 
 " copy file path into buffer
 :nmap cp :let @* = expand("%:p")
+
+autocmd BufNewFile,BufRead *.ratchet   set syntax=html
+autocmd BufNewFile,BufRead *.tex   set syntax=html
+
+" vim test
+"nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+"nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
+"
+" cp full path
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
+
+" javascript jsx
+let g:jsx_ext_required = 0

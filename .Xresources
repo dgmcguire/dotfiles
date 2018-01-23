@@ -9,7 +9,7 @@ URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
 ! Extensions
-URxvt.perl-ext-common: default,clipboard,keyboard-select,url-select
+URxvt.perl-ext-common: default,clipboard,keyboard-select,url-select,font-size
 URxvt.urlLauncher: xdg-open
 URxvt.urlButton: 1
 URxvt.underlineURLs: True
@@ -18,15 +18,9 @@ URxvt.copyCommand:  xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 
 ! Keybindings
-URxvt.keysym.Mod4-c: perl:clipboard:copy
-URxvt.keysym.Mod4-v: perl:clipboard:paste
-URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.C-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-slash:  perl:font-size:show
 
 ! Fonts
 
@@ -34,8 +28,8 @@ URxvt.keysym.M-u: perl:url-select:select_next
 !URxvt.font: xft:Courier-10
 
 !Inconsolata
-!URxvt.font: xft:Inconsolata-12
-!URxvt.boldFont: xft:Inconsolata-12
+!URxvt.font: xft:Inconsolata\ for\ Powerline-15
+!URxvt.boldFont: xft:Inconsolata\ Bold\ for\ Powerline-15
 !URxvt.letterSpace: -1
 
 !Inconsolata-g
@@ -55,9 +49,9 @@ URxvt.keysym.M-u: perl:url-select:select_next
 !URxvt.letterSpace: -1
 
 !DejaVu Sans
-URxvt.font: xft:DejaVu Sans Mono-14
+URxvt.font: xft:Droid\ Sans\ Mono\ for\ Powerline-11
 URxvt.letterSpace: -1
-URxvt.lineSpace: 1
+!URxvt.lineSpace: 1
 
 !Manospace
 !URxvt.font: xft:Monospace-10
@@ -99,36 +93,36 @@ URxvt.color15 : #EEEEEC
 ! XTerm
 
 ! General settings
-XTerm*termName: xterm-256color
-XTerm*geometry: 80x24
-XTerm*saveLines: 1024
-XTerm*scrollBar: False
-XTerm*loginshell: False
-XTerm*cursorBlink: False
+!XTerm*termName: xterm-256color
+!XTerm*geometry: 80x24
+!XTerm*saveLines: 1024
+!XTerm*scrollBar: False
+!XTerm*loginshell: False
+!XTerm*cursorBlink: False
 
 ! Fonts and Encoding
-XTerm*utf8: True
-XTerm*locale: True
-XTerm*utf8Title: True
-XTerm*renderFont: True
-XTerm*preeditType: Root
-XTerm*xftAntialias: true
-XTerm*faceName: xft:Inconsolata-12
+!XTerm*utf8: True
+!XTerm*locale: True
+!XTerm*utf8Title: True
+!XTerm*renderFont: True
+!XTerm*preeditType: Root
+!XTerm*xftAntialias: true
+!XTerm*faceName: xft:Inconsolata-12
 
 ! Trim trailing spaces
-XTerm*trimSelection: true
+!XTerm*trimSelection: true
 
 ! Fix alt-key inputting
-XTerm*eightBitInput: false
-XTerm*metaSendsEscape: true
+!XTerm*eightBitInput: false
+!XTerm*metaSendsEscape: true
 
 ! Copy and paste with clipboard
-XTerm*translations: #override \
-	Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
-	Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
+!XTerm*translations: #override \
+  Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD)
 
 ! Allow selecting email/url by double-click
-XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+!XTerm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
 
 ! Tango Theme
 
